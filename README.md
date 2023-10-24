@@ -1,3 +1,2 @@
 # IDN-Web-Project
-Bugar wahyu
-edit aja
+Lorem Ipsum Dolor Sit Amet
