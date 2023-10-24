@@ -11,4 +11,4 @@ The Sungut Project is a small collaborative group assigned to create a simple we
 - Fathir Dwi
 - Muhammad Adya Putra Yamani
 - Nadhir
-- Yosua Gerrad
+- Yosua Gerrard
