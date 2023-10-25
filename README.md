@@ -9,6 +9,7 @@ The Sungut Project is a small collaborative group assigned to create a simple we
 ## Member of Sungut Project
 - Bugar Wahyu
 - Fathir Dwi
+- Kanz Abiyu Alkautsar
 - Muhammad Adya Putra Yamani
 - Nadhir
 - Yosua Gerrard
