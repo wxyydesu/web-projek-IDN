@@ -40,6 +40,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     color: white;
+    /* border: 2px solid black; */
 }
 .content .text {
     width: auto;
@@ -84,4 +85,249 @@ body {
         transform:translateY(-10px);
         transform: rotatez(3deg);
     }
-} 
+}
+.service {
+    text-align: right;
+    color: white;
+    /* border: 2px solid black; */
+}
+
+.half-background {
+    width: 100%;
+    height: 1100px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    position: relative;
+    background-image: url('/IDN/web-projek-IDN-main/assets/Genshin-Banner.png'); /* URL gambar latar belakang */
+    background-size: cover;
+}
+
+
+.half-background::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; /* Menutup setengah horizontal */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(61, 21, 42), rgb(61, 21, 42)); /* Efek fade dari transparan ke opak */
+}
+.service .text {
+    width: auto;
+    font-size: 1.5em;
+    color: white;
+    /* border: 2px solid black; */
+    margin-top: 280px;
+    margin-left: 100px;
+}
+.service .text button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #008CBA; /* Biru */
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .service {
+        text-align: center;
+        padding-right: 20px;
+    }
+}
+.service .text button:hover {
+    background-color: black;
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform:translateY(0px);
+        transform: rotateY(0px);
+    }
+    50% {
+        transform:translateY(-10px);
+        transform: rotatez(3deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+    .content .text, .content{
+        width: 100%;
+    }
+}
+
+
+
+/* FOOTER */
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eef8ff;
+} */
+
+footer {
+    width: 100%;
+    position: absolute;
+    top: 135em;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    /* border-top-left-radius: 125px; */
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2) .col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logo {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 25px;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .far {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.sosial-icons {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    
+    100% {
+        left: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    
+    .col:nth-child(2) .col:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+
+
