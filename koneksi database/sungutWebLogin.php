@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['username'] = $username;
-        header("location: Sunggut_Reborn.html"); 
+        header("location: loading.html"); 
     } else {
         echo "Login gagal. Cek kembali username dan password.";
         header("location: gagalcopy.php"); 
