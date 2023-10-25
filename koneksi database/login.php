@@ -103,7 +103,7 @@ button:hover{
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form action="sungutWebDaftar.php" method="post">
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="username" placeholder="User name" required="">
 					<input type="email" name="email" placeholder="Email" required="">
@@ -113,7 +113,7 @@ button:hover{
 			</div>
 
 			<div class="login">
-				<form>
+				<form action="sungutWebLogin.php" method="post"	>
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="text" name="username" placeholder="Username" required="">
 					<input type="password" name="password" placeholder="Password" required="">
