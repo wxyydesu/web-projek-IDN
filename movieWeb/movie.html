@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sungut Movie</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;400&family=Prompt&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="image/ai2.jpg">
     <link rel="icon" href="img/icon.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
         *{
             padding: 0;
             margin: 0;
             scroll-behavior: smooth;
-            
+            font-family: 'Gabarito', sans-serif;
         }
 
         img {
-            width: 100%
+            width: 100%;
         }
 
         body{
@@ -28,6 +27,8 @@
             margin: 50px;
             color: white;
         }
+
+        
 
         /* grid */
         .container{
@@ -101,6 +102,7 @@
             
         }
 
+        
         .services{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -155,19 +157,20 @@
             list-style: none;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 5px;
-             
+            text-align: start;
         }
         
         .menu a{
-            display: block;
-            background-color: rgb(255, 0, 0);
+            display: block; 
             color: rgb(255, 255, 255);
             text-decoration: none;
-            text-align: center;
+            text-align: start;
             padding: 5px;
             text-transform: uppercase;
             font-size: 0.9em;
             border-radius: 5px;
+            width: 100%;
+            font-size: 2vh;
         }
 
         .gallery{
@@ -182,7 +185,7 @@
 
         .gallery h2{
             grid-column: 1/-1;
-            text-align: center;
+            text-align: start;
             margin-bottom: 20px;
         }
 
@@ -293,11 +296,7 @@
 
 
 
-        footer{
-            background-color: red;
-            width: 100%;
-            height: 200px;
-        }
+
 
 
         .tooltip-container {
@@ -328,8 +327,76 @@
 }
 
 
+ul li {
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-family: arvo;
+}
+
+li a {
+    color: white;
+}
+
+li a:hover {
+    color: red;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding-left: 0;
+    left: 0;
+    display: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5); /* Ganti warna dan transparansi sesuai kebutuhan */
+    border: 1px solid #000;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 250px;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #ccc;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+}
+
+ul li ul li a:hover {
+    padding-left: 10px;
+    border-left: 20px solid red;
+    transition: all 0.3s ease;
+}
 
 
+a {
+    text-decoration: none;
+    &:hover {
+    color: red;
+}
+
+}
+
+ul li ul li a { transition: all 0.5s ease; }
 
 
     </style>
@@ -345,82 +412,32 @@
         </header>
 
         <nav class="menu" >
-        <div class="brand">Happy Watching</div>
-            <ul class="menu">
+        <!-- <div class="brand">Happy Watching</div> -->
+        <ul><li><a href="#Home">Home</a></li>
+            <li><a href="#menu">Genre</a>
+                <ul class="dropdown">
+                    <li><a href="#galer">Action</a></li>
+                    <li><a href="#anime">Anime</a></li>
+                    <li><a href="#movies">Horror</a></li>
+                    <li><a href="#anime">Romance</a></li>
+                </ul>
+            <li><a href="#menu">Country</a>
+                <ul class="dropdown">
+                    <li><a href="#galer">Western</a></li>
+                    <li><a href="#anime">Japanese</a></li>
+                    <li><a href="#movies">Korean</a></li>
+                    <li><a href="#anime">Chinese</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            
+        </ul><!-- <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#galer">Popular Movies</a></li>
                 <li><a href="#movies">Movies</a></li>
-                <!-- <li><a href="">About</a></li> -->
-            </ul>
+            </ul> -->
         </nav>
-        <div class="title-category">
-            <h1>Category</h1>
-        </div>
-        <section class="services">
-            
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Action</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Biography</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Comedy</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Drama</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Fantasy</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Music</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Romance</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Sci-Fi</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>Thriller</h3></a>
-            </div>
-            <div class="service">
-                <a href="" target="_blank">
-                <h3>War</h3></a>
-            </div>
-            
-        </section>
         <br>
-        <div class="title-category">
-            <h1>Country</h1>
-        </div>
-        <section>
-            <section class="services">
-            
-                <div class="service">
-                    <a href="" target="_blank">
-                    <h3>Western</h3></a>
-                </div>
-                <div class="service">
-                    <a href="" target="_blank">
-                    <h3>Japanese</h3></a>
-                </div>
-                <div class="service">
-                    <a href="" target="_blank">
-                    <h3>Korean</h3></a>
-                </div>
-            </section>
-        </section>
         <section class="gallery" id="galer">
             <h2>Popular Movies</h2>
                 <a href="img/fnaf.mp4"><div class="tooltip-container">
@@ -459,7 +476,7 @@
             
         </section>
 
-        <section class="gallery" id="galer">
+        <section class="gallery" id="anime">
             <h2>New Release</h2>
             <a href=""><div class="tooltip-container">
                 <img src="img/fnf-poster.jpg" alt="">
@@ -492,7 +509,7 @@
         <section class="gallery" id="movies">
             <h2>Movies</h2>
             <img src="img/seishun.jpg" alt="">
-           
+
             <img src="img/kimetsu-no-yaiba.jpg" alt="">
 
             <img src="img/joker.jpeg" alt="">
