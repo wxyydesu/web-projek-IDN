@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sungut Movie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;400&family=Prompt&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="image/ai2.jpg">
+    <link rel="icon" href="img/icon.png">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            
+        }
+
+        img {
+            width: 100%
+        }
+
+        body{
+            background-color: black;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            margin: 50px;
+            color: white;
+        }
+
+        /* grid */
+        .container{
+            display: grid;
+            gap: 10px;
+        }
+
+        /* header */
+        .header{
+            display: grid;
+            grid-template-areas: 
+            'hero hero'
+            'hero hero';
+            
+        }
+
+        .hero{
+            grid-area: hero;
+            min-height: 300px;
+            background-image: url(img/lele.png);
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            border-radius: 5px;
+        }
+
+        .hero > * {
+            display: none;
+        }
+
+        .feature{
+            background-color: white;
+            color: white;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .feature-1{
+            grid-area: feature-1;
+            background-image: url(image/kanna3.jpeg);
+            background-size: cover;
+            
+        }
+
+        .feature-2{
+            grid-area: feature-2;
+            background-image: url(image/kanna4.jpeg);
+            background-size: cover;
+        }
+
+        .feature .price{
+            font-size: 3em;
+            font-weight: 200;
+            
+        }
+
+        .feature a{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* navigasi */
+        .menu{
+            order: -1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            
+        }
+
+        .services{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            color: white;
+            gap: 20px;
+            text-align: center;
+            
+        }
+
+        .services img{
+            width: 40px;
+            justify-content: center;
+            padding-top: 2px;
+            
+        }
+
+        .service{
+            background-color: rgb(255, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        .service h3{
+            font-size: 1.5em;
+            color: white;
+            
+        }
+
+        .service a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .service p{
+            font-weight: 200;
+            letter-spacing: 1px;
+            font-size: 0.8em;
+        }
+
+        
+
+        .menu .brand{
+            font-size: 1.3em;
+            color: white;
+            text-align: end;
+        }
+
+        .menu ul{
+            display: grid;
+            list-style: none;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 5px;
+             
+        }
+        
+        .menu a{
+            display: block;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-align: center;
+            padding: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            border-radius: 5px;
+        }
+
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: 100px;
+            gap: 50px;
+
+        }
+
+        
+
+        .gallery h2{
+            grid-column: 1/-1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* responsive breakpoint */
+        @media (max-width: 1024px) {
+            .menu{
+                order: inherit;
+                grid-template-columns: 1fr;
+            }
+
+            .menu .brand{
+                display: none;
+                
+            }
+            .hero>*{
+                display: block;
+                color: white;
+                padding: 10px;
+            }
+
+            .hero{
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        
+
+        @media (max-width: 768px) {
+            
+        }
+
+        @media (max-width: 600px) {
+            body{
+                margin: 15px;
+            }
+            .header{
+                grid-template-areas: 
+                'hero'
+                'feature-1'
+                'feature-2';
+            } 
+
+            .gallery img{
+                margin-left: 70px;
+                width: 50%;
+            }
+
+            .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            z-index: 1;
+            margin-top: 100px;
+            color: black;
+            width: 200px;
+            margin-left: 50px;
+        }
+
+        }
+
+        @media (max-width: 500px) {
+            .gallery img{
+                margin-left: 90px;
+                width: 50%;
+            }
+
+            .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            z-index: 1;
+            margin-top: 100px;
+            color: black;
+            width: 200px;
+            margin-left: 50px;
+        }
+        }
+
+
+        .icons img{
+            width: 68px;
+            padding-top: 2px;
+        }
+
+
+        .crop{
+            width: 200px; /* width of container */
+            height: 200px; /* height of container */
+            object-fit: cover;
+            object-position: 20% 10%; /* try 20px 10px */ 
+            border: 5px solid black;
+        }
+
+        
+
+        .title-category{
+            text-align: center;
+        }
+
+
+
+        footer{
+            background-color: red;
+            width: 100%;
+            height: 200px;
+        }
+
+
+        .tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                
+            </div>
+            
+            
+        </header>
+
+        <nav class="menu" >
+        <div class="brand">Happy Watching</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#galer">Popular Movies</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <!-- <li><a href="">About</a></li> -->
+            </ul>
+        </nav>
+        <div class="title-category">
+            <h1>Category</h1>
+        </div>
+        <section class="services">
+            
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Action</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Biography</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Comedy</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Drama</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Fantasy</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Music</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Romance</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Sci-Fi</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>Thriller</h3></a>
+            </div>
+            <div class="service">
+                <a href="" target="_blank">
+                <h3>War</h3></a>
+            </div>
+            
+        </section>
+        <br>
+        <div class="title-category">
+            <h1>Country</h1>
+        </div>
+        <section>
+            <section class="services">
+            
+                <div class="service">
+                    <a href="" target="_blank">
+                    <h3>Western</h3></a>
+                </div>
+                <div class="service">
+                    <a href="" target="_blank">
+                    <h3>Japanese</h3></a>
+                </div>
+                <div class="service">
+                    <a href="" target="_blank">
+                    <h3>Korean</h3></a>
+                </div>
+            </section>
+        </section>
+        <section class="gallery" id="galer">
+            <h2>Popular Movies</h2>
+                <a href="img/fnaf.mp4"><div class="tooltip-container">
+                <img src="img/fnf-poster.jpg" alt="">
+                <div class="tooltip"><h1>Five Nights at Freddy's</h1><p>menceritakan seorang satpam yang bermasalah saat dia mulai bekerja di Freddy Fazbear's Pizza, saat menghabiskan malam pertamanya di tempat kerja, dia menyadari shift malam di Freddy's tidak akan mudah untuk dilalui.</p></div>
+                </div></a>
+                <a href="https://playeriframe.shop/?url=https%3A%2F%2Fstream.hownetwork.xyz%2Fvideo.php%3Fid%3D34eaf94f41700298fe91dee8fb1d20fe"><div class="tooltip-container">
+                <img src="img/spiderman.jpg" alt="">
+                <div class="tooltip"><h1>Spider Man No Way Home</h1><p>Spider-Man, identitas asli dari pahlawan nan ramah ini terbongkar, sehingga membuat tanggung jawabnya sebagai seorang berkekuatan super berbenturan dengan kehidupan normalnya, dan menempatkan semua orang terdekatnya dalam posisi paling terancam.</p></div>
+                </div></a>
+
+                <a href="suzume.html"><div class="tooltip-container">
+                    <img src="img/suzume.jpg" alt="">
+                    <div class="tooltip"><h1>Suzume</h1><p>Perjalanan Suzume dimulai di sebuah kota yang tenang di Kyushu (terletak di Barat daya Jepang) ketika dia bertemu dengan seorang pria muda yang mengatakan kepadanya, "Saya sedang mencari pintu." Apa yang Suzume temukan adalah satu pintu lapuk yang berdiri tegak di tengah reruntuhan seolah terlindung.</p></div>
+                    </div></a>
+                
+                <a href="https://playeriframe.shop/?url=https%3A%2F%2Fstream.hownetwork.xyz%2Fvideo.php%3Fid%3D71a2ce79c0abb887e914b076abc0c466"><div class="tooltip-container">
+                    <img src="img/avangersendgame.jpg" alt="">
+                    <div class="tooltip"><h1>Avangers End Game</h1><p>Melanjutkan Avengers Infinity War, dimana kejadian setelah Thanos berhasil mendapatkan semua infinity stones dan memusnahkan 50% semua mahluk hidup di alam semesta. Akankah para Avengers berhasil mengalahkan Thanos ?</p></div>
+                    </div></a>
+                
+                <a href=""><div class="tooltip-container">
+                        <img src="img/kiminonawa.jpg" alt="">
+                        <div class="tooltip"><h1>Kimi No Nawa</h1><p>bercerita tentang dua remaja bernama Mitsuha Miyamizu dan Taki Tachibana yang bertukar tubuh karena sudah kejadian. Awalnya mereka tidak saling mengenal dan keduanya tinggal di tempat yang berbeda jauh.</p></div>
+                        </div></a>
+            <!-- <a href=""><div>
+            <img src="img/spiderman-atsv.jpeg" alt="">
+            </div></a>
+            <a href=""><div>
+            <img src="img/avangersendgame.jpg" alt="">
+            </div></a>
+            <a href=""><div>
+            <img src="img/gotoubun.jpg" alt="">
+            </div></a> -->
+            
+            
+        </section>
+
+        <section class="gallery" id="galer">
+            <h2>New Release</h2>
+            <a href=""><div class="tooltip-container">
+                <img src="img/fnf-poster.jpg" alt="">
+                <div class="tooltip"><h1>Five Nights at Freddy's</h1><p>menceritakan seorang satpam yang bermasalah saat dia mulai bekerja di Freddy Fazbear's Pizza, saat menghabiskan malam pertamanya di tempat kerja, dia menyadari shift malam di Freddy's tidak akan mudah untuk dilalui.</p></div>
+                </div></a>
+
+            <a href=""><div>
+            <img src="img/seishun.jpg" alt="">
+            </div></a>
+
+            <a href=""><div class="tooltip-container">
+                <img src="img/suzume.jpg" alt="">
+                <div class="tooltip"><h1>Suzume</h1><p>Perjalanan Suzume dimulai di sebuah kota yang tenang di Kyushu (terletak di Barat daya Jepang) ketika dia bertemu dengan seorang pria muda yang mengatakan kepadanya, "Saya sedang mencari pintu." Apa yang Suzume temukan adalah satu pintu lapuk yang berdiri tegak di tengah reruntuhan seolah terlindung.</p></div>
+                </div></a>
+
+            <a href=""><div>
+            <img src="img/kimetsu-no-yaiba.jpg" alt="">
+            </div></a>
+
+            <a href=""><div class="tooltip-container">
+                <img src="img/gotoubun.jpg" alt="">
+                <div class="tooltip"><h1>The Quintessential Quintuplets The Movie</h1><p>Futaro telah memimpin lima quintuplets ke titik di mana mereka dapat lulus dan mengejar impian mereka sendiri. Sekarang, akhirnya, mereka telah mencapai festival sekolah terakhir mereka. Setelah memutuskan untuk menjadikan kesempatan ini sesuatu yang tak terlupakan, Futaro mencari perasaannya terhadap kelima quintuplets.</p></div>
+                </div></a>
+            
+            
+        </section>
+
+        <br>
+
+        <section class="gallery" id="movies">
+            <h2>Movies</h2>
+            <img src="img/seishun.jpg" alt="">
+           
+            <img src="img/kimetsu-no-yaiba.jpg" alt="">
+
+            <img src="img/joker.jpeg" alt="">
+            
+            <img src="img/jurassic.jpg" alt="">
+            
+            <img src="img/harrypotterjpg.jpg" alt="">
+            
+            <img src="img//kanna10.jpeg" alt="">
+            
+            
+            
+        </section>
+        <h1 style="text-align: center;">COMING SOON</h1>
+
+        
+        
+    </div>
+    
+    
+</body>
+</html>
