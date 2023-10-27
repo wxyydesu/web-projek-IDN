@@ -6,10 +6,5 @@
 ## About
 The Sungut Project is a small collaborative group assigned to create a simple website as part of a practical assignment from IDN.
 
-## Member of Sungut Project
-- Bugar Wahyu
-- Fathir Dwi
-- Kanz Abiyu Alkautsar
-- Muhammad Adya Putra Yamani
-- Nadhir
-- Yosua Gerrard
+<img width="1366" alt="Frame 6-polos" src="https://github.com/wxyydesu/web-projek-IDN/assets/75105559/6d17fcbe-4a05-451b-ab13-28510b92dbdc">
+
