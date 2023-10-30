@@ -3,7 +3,8 @@
 <head>
 	<title>Slide Navbar</title>
 	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="../img/putra.png">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <style>
     body{
 	margin: 0;
@@ -13,7 +14,7 @@
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background: linear-gradient(to bottom, #820007, #5e0005, #000000);
 }
 .main{
 	width: 350px;
@@ -61,7 +62,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #573b8a;
+	background: black;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -72,17 +73,17 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background: red;
 }
 .login{
 	height: 460px;
-	background: #eee;
+	background: red;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #573b8a;
+	color: white;
 	transform: scale(.6);
 }
 
