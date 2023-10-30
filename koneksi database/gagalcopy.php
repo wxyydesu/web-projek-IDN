@@ -58,7 +58,7 @@
 </head>
 <body>
     <div class="container"><div class="display"></div><img src="Crashing On The Couch GIF - Sad Lonely Alone - Discover & Share GIFs.gif" alt="" srcset="">
-    <p>YAHHHH, kayaknya gagal deh, coba dicek lagi mungkin ada yang salah  ::(<span><a href="login.php"><marquee scrollamount="20">Yuk balik lagi ke page Login</marquee></a></span></p>
+    <p>YAHHHH, kayaknya gagal deh, coba dicek lagi mungkin ada yang salah  ::(<span><a href="index.php"><marquee scrollamount="20">Yuk balik lagi ke page Login</marquee></a></span></p>
     </div>
 </body>
 </html>
