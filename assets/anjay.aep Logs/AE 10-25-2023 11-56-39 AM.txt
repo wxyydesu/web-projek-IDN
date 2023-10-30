@@ -1,8 +1,0 @@
-  10/25/2023 11:56:39 AM: Starting composition “Group 1”.
-
-  Output To: C:\Users\Lenovo\Documents\hack\Test\IDN\web-projek-IDN-main\assets\game.png    10/25/2023 11:56:39 AM: Finished composition “Group 1”.
-
-
-  Total Time Elapsed: 0 Seconds
-Log closed on 10/25/2023 at 11:56:39 AM
-
